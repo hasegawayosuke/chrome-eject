@@ -1,0 +1,22 @@
+{
+	"name" : "chrome-eject",
+	"version" : "0.1",
+	"description" : "CD-ROM eject",
+	"icons" : {"48" : "icon48.png", "128" : "icon128.png" },
+    "permissions" : [
+        "tabs", "http://*/*", "https://*/*"
+    ],
+	"browser_action" : {
+		"default_icon" : "icon48.png",
+		"default_title" : "Eject CD-ROM"
+	},
+	"background" : {
+		"page" : "background.html",
+		"persistent" : true
+	},
+	"manifest_version" : 2,
+	"plugins" : [
+		{ "path" : "win32api.dll", "public" : false }
+	]
+}
+
